@@ -172,3 +172,24 @@ Lab05: chạy `bash lab.sh db-config` trực tiếp trong terminal Ubuntu/WSL t�
 Dùng dữ liệu thử nghiệm, không dùng thông tin cá nhân thật. Mở phiên trình duyệt riêng để kiểm tra cách ly Session. Cookie tùy chọn `view` của Lab04/05 dùng chung theo host, không tách theo cổng; dùng hai phiên riêng nếu so sánh đồng thời hai lab.
 
 Nếu Lab05 mất kết nối lúc lưu, ứng dụng giữ bản nháp và báo lỗi 503. Sau khi khôi phục kết nối, quay lại xác nhận để thử lại. Danh sách sự kiện hiển thị số chỗ mẫu, không phản ánh số đăng ký thực trong CSDL. Bộ lọc nâng cao, kiểm tra bản nháp mở rộng và thống kê vẫn là TODO dành cho sinh viên.
+
+
+### Bản giao diện Material 3
+
+Các nhánh [lab1](https://github.com/FIT-DNU/Open-Source-Software-Development/tree/lab1), [lab3](https://github.com/FIT-DNU/Open-Source-Software-Development/tree/lab3), [lab4](https://github.com/FIT-DNU/Open-Source-Software-Development/tree/lab4), [lab5](https://github.com/FIT-DNU/Open-Source-Software-Development/tree/lab5) đã bổ sung giao diện, ảnh minh họa cục bộ và tài liệu tương ứng. [lab2](https://github.com/FIT-DNU/Open-Source-Software-Development/tree/lab2) tiếp tục chạy trong terminal. Giữ nguyên các lệnh clone/chạy phía trên; không cần Node, Composer hay bước build.
+
+Với Lab03–05, sau khi chạy máy chủ, mở khu thử riêng:
+
+| Bài | Sáu sự kiện hư cấu | Thử vé và ghế |
+| --- | --- | --- |
+| Lab03 | [Sự kiện mẫu](http://127.0.0.1:8103/ui-demo.php) | [Chọn thử](http://127.0.0.1:8103/ticket-preview.php?id=demo-open-source) |
+| Lab04 | [Sự kiện mẫu](http://127.0.0.1:8104/ui-demo.php) | [Chọn thử](http://127.0.0.1:8104/ticket-preview.php?id=demo-open-source) |
+| Lab05 | [Sự kiện mẫu](http://127.0.0.1:8105/ui-demo.php) | [Chọn thử](http://127.0.0.1:8105/ticket-preview.php?id=demo-open-source) |
+
+Lab05 vẫn cần cấu hình PostgreSQL cho các trang nghiệp vụ. Danh sách, biểu mẫu và mã kết quả `PREVIEW_OK`, `SIMULATED_OK`, `CREATED`, `DUPLICATE` giữ nguyên ý nghĩa. Metadata hư cấu ở trang chi tiết chỉ phục vụ trình bày; ID demo không đi vào đăng ký thật.
+
+Khu thử vé/ghế chỉ giữ lựa chọn trong bộ nhớ trang, tải lại sẽ xóa; chưa giữ ghế, tạo vé hay thanh toán. Có 96 ghế mẫu, 68 khả dụng; hai VIP giá mẫu 350.000 đồng có tổng 700.000 đồng. Bản sinh viên vẫn giữ TODO và các ca `extend` chưa đạt cho sinh viên tự làm. Có thể kiểm tra dữ liệu UI riêng bằng `php tests/ui-demo.php` tại `Ma_nguon` Lab03–05.
+
+Ảnh SVG tự tạo có giấy phép CC0 trong `Ma_nguon/public/assets/images/LICENSE.txt` của từng lab Web. README, HUONG_DAN.md, ảnh hướng dẫn và Word của các bài bị ảnh hưởng đã cập nhật; mục tiêu và rubric giữ nguyên.
+
+[Ranh giới sản phẩm](docs/communitypass/PRODUCT.md) · [Hệ thống trình bày](docs/communitypass/DESIGN.md)
