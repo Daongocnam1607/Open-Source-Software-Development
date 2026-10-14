@@ -156,3 +156,19 @@ Nếu báo `No such file or directory`, kiểm tra `pwd` và `ls`: thư mục hi
 | Lab05 | `TESTS=6 FAILED=0` và `TESTS=7 FAILED=0` |
 
 Các TODO được giữ nguyên cho sinh viên. Bộ `extend` ở bản khởi đầu còn ca chưa đạt; đây là phần cần tự làm, không phải lỗi clone hoặc cài môi trường.
+
+### Nhập mật khẩu và thử luồng Web
+
+Lab05: chạy `bash lab.sh db-config` trực tiếp trong terminal Ubuntu/WSL tương tác, tại `lab5/Ma_nguon`; không pipe đầu vào. Khi nhập mật khẩu, không có ký tự hoặc dấu sao hiện lên: gõ rồi nhấn Enter. Chỉ kết nối thành công mới có `CAU_HINH=DA_LUU`. Sai mật khẩu không ghi đè cấu hình đã lưu; chạy lại để nhập đúng. Sau đó chạy `check` và tạo schema như hướng dẫn ở trên.
+
+| Bài | Luồng mẫu để tự kiểm tra |
+| --- | --- |
+| Lab01 | Mở trang mẫu ở cổng 8101; bài shell thực hiện trong terminal. |
+| Lab02 | Chạy trong terminal, kết quả mẫu là `AVAILABLE`; không có Web. |
+| Lab03 | Tìm `php`/`xyz`, mở form, thử dữ liệu sai rồi đúng; đúng trả `PREVIEW_OK`, chưa lưu dữ liệu. |
+| Lab04 | Nhập → xem lại → sửa/hủy → nhập lại và xác nhận; kết quả `SIMULATED_OK`. Thử lưu tùy chọn Cookie. |
+| Lab05 | Nhập và xác nhận: `CREATED`; lặp cùng sự kiện–email: `DUPLICATE`. Khởi động lại PHP không mất dữ liệu. |
+
+Dùng dữ liệu thử nghiệm, không dùng thông tin cá nhân thật. Mở phiên trình duyệt riêng để kiểm tra cách ly Session. Cookie tùy chọn `view` của Lab04/05 dùng chung theo host, không tách theo cổng; dùng hai phiên riêng nếu so sánh đồng thời hai lab.
+
+Nếu Lab05 mất kết nối lúc lưu, ứng dụng giữ bản nháp và báo lỗi 503. Sau khi khôi phục kết nối, quay lại xác nhận để thử lại. Danh sách sự kiện hiển thị số chỗ mẫu, không phản ánh số đăng ký thực trong CSDL. Bộ lọc nâng cao, kiểm tra bản nháp mở rộng và thống kê vẫn là TODO dành cho sinh viên.
