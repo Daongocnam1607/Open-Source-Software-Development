@@ -51,7 +51,7 @@ Lab01–04 không cần PostgreSQL, Composer hoặc framework. Lab05 cần chu�
 
 ### Clone và chạy từng bài
 
-Chạy mỗi nhóm lệnh từ thư mục bạn muốn lưu bài học. Mỗi lệnh clone tạo một thư mục riêng; nếu đã tải bài, chỉ cần vào thư mục `Ma_nguon` của bài đó để chạy lại.
+Chạy mỗi nhóm lệnh từ thư mục bạn muốn lưu bài học. Nếu vừa chạy bài trước, dùng `cd ..` hai lần từ `labN/Ma_nguon` để trở về thư mục chứa các bài rồi mới clone bài tiếp theo. Mỗi lệnh clone tạo một thư mục riêng; nếu đã tải bài, chỉ cần vào thư mục `Ma_nguon` của bài đó để chạy lại.
 
 #### Lab01 — Linux và shell script
 
@@ -144,3 +144,15 @@ bash lab.sh extend
 - `extend`: kiểm tra phần tự làm; có thể chưa đạt khi sinh viên chưa hoàn thiện TODO. Không sửa test để bỏ qua lỗi.
 
 Nếu báo `No such file or directory`, kiểm tra `pwd` và `ls`: thư mục hiện tại cần chứa `lab.sh`. Nếu báo `Address already in use`, dừng máy chủ cũ bằng Ctrl+C trước khi chạy lại.
+
+### Kết quả kiểm thử phần mẫu
+
+| Bài | Kết quả yêu cầu của `bash lab.sh test` |
+| --- | --- |
+| Lab01 | `CHECK_ENV=PASS` |
+| Lab02 | `TESTS=5 FAILED=0` |
+| Lab03 | `TESTS=7 FAILED=0` |
+| Lab04 | `TESTS=6 FAILED=0` |
+| Lab05 | `TESTS=6 FAILED=0` và `TESTS=7 FAILED=0` |
+
+Các TODO được giữ nguyên cho sinh viên. Bộ `extend` ở bản khởi đầu còn ca chưa đạt; đây là phần cần tự làm, không phải lỗi clone hoặc cài môi trường.
